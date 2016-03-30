@@ -12,11 +12,12 @@ $border_radius_containers: 10px;
     border-radius: $border_radius_containers;
     margin: 10px;
     display: inline-block;
+    box-shadow: 2px 2px 2px 1px #d3d3d3;
+    vertical-align: top;
 
     &.card-lg {
         width: 95%;
-        margin: auto;
-   }
+    }
 
     &.pin {
 
@@ -50,7 +51,7 @@ $border_radius_containers: 10px;
             border-radius: $border_radius_containers;
 
             & > * {
-                position: absolute;                
+                position: absolute;
             }
 
             .profile-img-wrap {
@@ -73,6 +74,24 @@ $border_radius_containers: 10px;
                 left: 70px;
                 top: 30px;
             }
+        }
+    }
+
+    .picture-wrap {
+        height: 240px;
+
+        .picture {
+            max-height: 100%;
+            border-radius: $border_radius_containers;
+            width: 100%;
+        }
+
+        .picture-caption {
+            height: 20px;
+            padding: 3px 0;
+            background-color: white;
+            text-align: center;
+            border-radius: $border_radius_containers;
         }
     }
 }
