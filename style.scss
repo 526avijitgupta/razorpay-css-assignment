@@ -1,15 +1,65 @@
-$card_height: 280px;
+$card_height: 270px;
 $pin_picture_height: 120px;
+$pin_comment_height: 70px;
+$pin_profile_height: 80px;
+$border_radius_containers: 10px;
 
 .story-card {
     height: $card_height;
+    width: 30%;
+    background-color: #efefef;
+    padding: 5px;
+    border-radius: $border_radius_containers;
+    margin: 10px;
 
     &.pin {
         .picture-wrap {
             height: $pin_picture_height;
 
             .picture {
+                width: 100%;
+                border-radius: $border_radius_containers;
                 max-height: 100%;
+            }
+        }
+
+        .comment {
+            height: $pin_comment_height;
+            background-color: white;
+            text-align: center;
+            box-sizing: border-box;
+            padding-top: 10px;
+        }
+
+        .user-profile {
+            height: $pin_profile_height;
+            position: relative;
+            background-color: #EFE0E0;
+            border-radius: $border_radius_containers;
+
+            & > * {
+                position: absolute;                
+            }
+
+            .profile-img-wrap {
+                height: 50px;
+                left: 10px;
+                top: 10px;
+
+                .profile-img {
+                    max-height: 100%;
+                    border-radius: 25px;
+                }
+            }
+
+            .title {
+                left: 70px;
+                top: 10px;
+            }
+
+            .description {
+                left: 70px;
+                top: 30px;
             }
         }
     }
