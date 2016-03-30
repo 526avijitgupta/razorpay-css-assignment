@@ -1,0 +1,16 @@
+$card_height: 280px;
+$pin_picture_height: 120px;
+
+.story-card {
+    height: $card_height;
+
+    &.pin {
+        .picture-wrap {
+            height: $pin_picture_height;
+
+            .picture {
+                max-height: 100%;
+            }
+        }
+    }
+}
