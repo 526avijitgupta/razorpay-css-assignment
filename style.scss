@@ -11,8 +11,20 @@ $border_radius_containers: 10px;
     padding: 5px;
     border-radius: $border_radius_containers;
     margin: 10px;
+    display: inline-block;
+
+    &.card-lg {
+        width: 95%;
+        margin: auto;
+   }
 
     &.pin {
+
+        &.card-lg {
+            width: 95%;
+            margin: auto;
+        }
+
         .picture-wrap {
             height: $pin_picture_height;
 
@@ -44,7 +56,7 @@ $border_radius_containers: 10px;
             .profile-img-wrap {
                 height: 50px;
                 left: 10px;
-                top: 10px;
+                top: 12px;
 
                 .profile-img {
                     max-height: 100%;
