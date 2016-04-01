@@ -5,35 +5,26 @@
     text-align: center;
 
     .story-card {
-        height: $card_height + 15px;
-        width: 29%;
+        height: $card_height;
+        width: $card_default_width;
         margin: 10px;
         display: inline-block;
         vertical-align: top;
-        border: 2px solid transparent;
-
-        &:hover {
-            border-color: #d3d3d3;
-        }
+        box-sizing: border-box;
 
         &.card-lg {
-            width: 96%;
+            width: $card_lg_default_width;
         }
 
         .card-content {
-            box-shadow: 0px 2px 2px #d3d3d3;
-            border-radius: 10px;
+            box-shadow: 0px 2px 2px 2px $card_shadow_color;
+            border-radius: $border_radius;
         }
 
         &.pin {
             height: $card_height;
             padding: 8px 12px;
-            background-color: #efefef;
-
-            &.card-lg {
-                width: 95%;
-                margin: auto;
-            }
+            background-color: $pin_background_color;
 
             .picture-wrap {
                 height: $pin_picture_height;
@@ -41,7 +32,7 @@
                 .picture {
                     width: 100%;
                     max-height: 100%;
-                    border-radius: 10px 10px 0 0;
+                    border-radius: $border_radius $border_radius 0 0;
                 }
             }
 
@@ -58,9 +49,10 @@
             .user-profile {
                 height: $pin_profile_height;
                 position: relative;
-                background-color: #EFE0E0;
-                border-radius: 0 0 10px 10px;
-                box-shadow: 0px 2px 1px #d3d3d3;
+                background-color: $user_profile_background_color;
+                border-radius: 0 0 $border_radius $border_radius;
+                box-shadow: 0px 2px 1px $card_shadow_color;
+                box-sizing: border-box;
 
                 & > * {
                     position: absolute;
@@ -69,7 +61,7 @@
                 .profile-img-wrap {
                     height: 45px;
                     left: 10px;
-                    top: 20px;
+                    top: 18px;
 
                     .profile-img {
                         max-height: 100%;
@@ -125,51 +117,36 @@
                     }
                 }
             }
-
         }
     }
 }
 
 @media only screen and (max-width: 1100px) {
     .main-container .story-card {
-        width: 45%;
-
-        &.st-1, &.st-4 {
-            float: left;
-        }
+        width: $card_1100_width;
 
         &.st-2, &.st-3 {
             float: right;
+            margin-right: 20px;
         }
 
         &.card-lg {
-            width: 45%;
+            width: $card_1100_width;
         }
 
-        &.pin {
-            width: 43%;
-        }
-
-        &.st-3, &.st-4 {
-            clear: left;
-        }
     }
 }
 
 @media only screen and (max-width: 720px) {
     .main-container .story-card {
-        width: 96%;
+        width: $card_720_width;
 
-        &.st-1, &.st-2, &.st-3, &.st-4 {
+        &.st-2, &.st-3 {
             float: none;
         }
 
         &.card-lg {
-            width: 96%;
-        }
-
-        &.pin {
-            width: 92%;
+            width: $card_720_width;
         }
     }
 }
